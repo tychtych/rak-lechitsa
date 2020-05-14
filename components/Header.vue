@@ -4,7 +4,6 @@
     <nav class="menu">
       <a href="">Link</a>
       <a href="">Link</a>
-      <a href="">Link</a>
     </nav>
   </header>
 </template>
