@@ -1,8 +1,19 @@
 <template>
   <div>
     <nuxt />
+    <my-footer />
   </div>
 </template>
+
+<script>
+import Footer from '@/components/Footer';
+
+export default {
+  components: {
+    'my-footer': Footer,
+  },
+};
+</script>
 
 <style>
 html {
