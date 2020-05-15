@@ -78,7 +78,7 @@ export default {
 .about {
   background-color: #613a93;
   color: #ffffff;
-  padding: 80px 60px 60px 100px;
+  padding: 80px 60px 60px 80px;
   box-sizing: border-box;
   min-height: 650px;
 }

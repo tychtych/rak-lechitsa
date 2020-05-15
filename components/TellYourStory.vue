@@ -28,27 +28,30 @@
         после проверки. Пожалуйста, заполняйте все пункты корректно, если вы
         испытаете какие-то сложности, воспользуйтесь 2-м вариантом.
       </p>
-      <button class="your-story__form">Заполнить форму</button>
+      <purple-button />
     </div>
   </section>
 </template>
 
 <script>
-export default {};
+import PurpleButton from '@/components/ui/PurpleButton';
+export default {
+  components: {
+    'purple-button': PurpleButton,
+  },
+};
 </script>
 
 <style scoped>
 .your-story {
-  max-width: 1440px;
-  margin: 0 auto;
+  max-width: 100%;
+  padding: 100px 60px 100px 60px;
   background-color: #f7f7f7;
   margin-bottom: 100px;
 }
 
 .your-story__container {
-  max-width: 1320px;
   margin: 0 auto;
-  padding: 100px 0 100px 0;
   display: grid;
   justify-content: space-between;
   grid-template-columns: repeat(2, 50%);

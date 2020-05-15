@@ -91,7 +91,6 @@ export default {
   max-width: 1320px;
   margin: 0 auto;
   padding-bottom: 100px;
-  padding-top: 100px;
 }
 
 .stories__title {

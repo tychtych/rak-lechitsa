@@ -14,9 +14,9 @@
           </li>
         </ul>
         <div class="footer__container-link">
-          <a href class="container__link"
-            >Мы&nbsp;в&nbsp;Инстаграме&nbsp;и&nbsp;Youtube</a
-          >
+          <a href class="container__link">
+            Мы&nbsp;в&nbsp;<span class="container__link-underline">Инстаграме</span>&nbsp;и&nbsp;<span class="container__link-underline">Youtube</span>
+          </a>
           <p
             class="container__link container__link_color_another-black"
             @click="popupHandler"
@@ -125,6 +125,7 @@ export default {
   justify-content: space-between;
   flex-direction: column;
 }
+
 .footer__list {
   padding: 0;
   list-style: none;
@@ -153,7 +154,13 @@ export default {
 .container__link {
   text-decoration: none;
   color: currentColor;
+  cursor: pointer;
 }
+
+.container__link-underline {
+  text-decoration: underline;
+}
+
 .container__link_color_another-black {
   color: #121212;
 }
@@ -190,7 +197,7 @@ export default {
 @media screen and (max-width: 1281px) {
   .footer__container {
     grid-template-columns: repeat(3, 1fr);
-    margin: 50зч 50px 0;
+    margin: 50px 50px 0;
   }
   .footer__title {
     max-width: 305px;

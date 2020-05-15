@@ -1,5 +1,7 @@
 <template>
   <div>
+    <cover />
+    <history-of-people />
     <stories />
     <instagram />
     <your-story />
@@ -9,6 +11,8 @@
 </template>
 
 <script>
+import Cover from '@/components/Cover';
+import HistoryOfPeople from '@/components/HistoryOfPeople.vue';
 import Stories from '@/components/Stories';
 import Instagram from '@/components/Instagram';
 import TellYourStory from '@/components/TellYourStory';
@@ -18,6 +22,8 @@ import About from '@/components/About';
 
 export default {
   components: {
+    cover: Cover,
+    'history-of-people': HistoryOfPeople,
     stories: Stories,
     instagram: Instagram,
     'your-story': TellYourStory,
