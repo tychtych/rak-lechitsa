@@ -1,6 +1,7 @@
 <template>
   <section class="stories">
     <h2 class="stories__title">Истории неизлечимых привычек</h2>
+    <slot></slot>
     <ul class="stories__container">
       <li v-for="item in storycards" :key="item.id">
         <story-card
@@ -11,7 +12,7 @@
         />
       </li>
     </ul>
-    <button class="stories__more">Больше статей</button>
+    <button class="stories__more" @click="goToStories">Больше статей</button>
   </section>
 </template>
 
@@ -20,6 +21,11 @@ import Storycard from '@/components/Storycard';
 export default {
   components: {
     'story-card': Storycard,
+  },
+  methods: {
+    goToStories() {
+      this.$router.push('/stories');
+    },
   },
   data() {
     return {
