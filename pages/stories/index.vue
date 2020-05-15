@@ -1,15 +1,24 @@
 <template>
   <div>
-    <my-header />
-    all stories
+    <stories>
+      <slot>
+        <input-search>
+          <button-search>Поиск</button-search>
+        </input-search>
+      </slot>
+    </stories>
   </div>
 </template>
 
 <script>
-import Header from '@/components/Header';
+import Stories from '@/components/Stories';
+import Button from '@/components/ui/Button';
+import Input from '@/components/ui/Input';
 export default {
   components: {
-    'my-header': Header,
+    stories: Stories,
+    'button-search': Button,
+    'input-search': Input,
   },
 };
 </script>
