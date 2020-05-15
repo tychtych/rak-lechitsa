@@ -29,10 +29,6 @@ export default {
         rel: 'stylesheet',
         href: '/fonts/fonts.css',
       },
-      {
-        rel: 'normalize',
-        href: '/vendor/normalize.css',
-      },
     ],
   },
   /*
