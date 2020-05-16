@@ -1,8 +1,7 @@
 <template>
   <section class="instagram">
     <div class="purple-strip">
-      <p>
-        рассказывайте ваши истории в Инстаграм
+      <p>рассказывайте ваши истории в Инстаграм
         <span class="hashtag">#этонелечится</span>
       </p>
     </div>
