@@ -6,13 +6,11 @@
 </template>
 
 <script>
-  export default {
-
-  }
+export default {};
 </script>
 
 <style scoped>
-  .cover {
+.cover {
   margin: 0 auto;
   max-width: 100%;
   width: 100%;
