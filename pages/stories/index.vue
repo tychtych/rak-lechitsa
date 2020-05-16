@@ -1,22 +1,15 @@
 <template>
-  <div class="container">
-    <h2 class="stories__title">Истории неизлечимых привычек</h2>
-    <slot>
-      <input-search>
-        <button-search>Поиск</button-search>
-      </input-search>
-    </slot>
-    <stories-grid />
+
   </div>
 </template>
 
 <script>
-import StoriesGrid from '@/components/StoriesGrid';
+
 import Button from '@/components/ui/Button';
 import Input from '@/components/ui/Input';
 export default {
   components: {
-    'stories-grid': StoriesGrid,
+
     'button-search': Button,
     'input-search': Input,
   },

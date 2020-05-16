@@ -15,7 +15,9 @@
         </ul>
         <div class="footer__container-link">
           <a href class="container__link">
-            Мы&nbsp;в&nbsp;<span class="container__link-underline">Инстаграме</span>&nbsp;и&nbsp;<span class="container__link-underline">Youtube</span>
+            Мы&nbsp;в&nbsp;<span class="container__link-underline"
+              >Инстаграме</span
+            >&nbsp;и&nbsp;<span class="container__link-underline">Youtube</span>
           </a>
           <p
             class="container__link container__link_color_another-black"

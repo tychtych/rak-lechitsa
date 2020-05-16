@@ -2,7 +2,6 @@
   <section class="stories">
     <h2 class="stories__title">Истории неизлечимых привычек</h2>
     <slot></slot>
-    <stories-grid />
     <button class="stories__more" @click="goToStories">Больше статей</button>
   </section>
 </template>
@@ -14,6 +13,11 @@ export default {
   components: {
     'story-card': Storycard,
     'stories-grid': StoriesGrid,
+  },
+  methods: {
+    goToStories() {
+      this.$router.push('/stories');
+    },
   },
   methods: {
     goToStories() {
