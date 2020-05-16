@@ -1,7 +1,9 @@
 <template>
   <section class="stories">
     <h2 class="stories__title">Истории неизлечимых привычек</h2>
-    <slot></slot>
+    <slot>
+
+    </slot>
     <stories-grid />
     <button class="stories__more" @click="goToStories">Больше статей</button>
   </section>
