@@ -1,12 +1,12 @@
 <template>
   <div>
     <ul class="stories__container">
-      <li v-for="item in storycards" :key="item.id">
+      <li v-for="item in storycards" :key="item.id" @click="goToStory(item.id)">
         <story-card
           :photo="item.photo"
           :name="item.name"
           :quote="item.quote"
-          :link="item.link"
+          :id="item.id"
         />
       </li>
     </ul>
@@ -18,6 +18,11 @@ import Storycard from '@/components/Storycard';
 export default {
   components: {
     'story-card': Storycard,
+  },
+  methods: {
+    goToStory(id) {
+      this.$router.push(`/stories/${id}`);
+    },
   },
   data() {
     return {
