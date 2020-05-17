@@ -20,11 +20,6 @@ export default {
       this.$router.push('/stories');
     },
   },
-  methods: {
-    goToStories() {
-      this.$router.push('/stories');
-    },
-  },
   data() {
     return {
       storycards: [

@@ -1,9 +1,9 @@
 <template>
-  <a class="story-card" :href="link" target="_blank">
+  <div class="story-card">
     <img :src="photo" class="story-card__photo" />
     <p class="story-card__name">{{ name }}</p>
     <p class="story-card__quote">{{ quote }}</p>
-  </a>
+  </div>
 </template>
 
 <script>
@@ -12,7 +12,13 @@ export default {
     photo: String,
     name: String,
     quote: String,
-    link: String,
+    id: String,
+    largeStyle: {},
+  },
+  data() {
+    return {
+      storyCardLarge: 'story-card__photo-large',
+    };
   },
 };
 </script>
@@ -42,5 +48,9 @@ export default {
 .story-card__photo {
   max-width: 300px;
   max-height: 300px;
+}
+.story-card__photo-large {
+  max-width: 580px;
+  max-height: 580px;
 }
 </style>
