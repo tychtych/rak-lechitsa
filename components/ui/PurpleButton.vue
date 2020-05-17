@@ -1,5 +1,7 @@
 <template>
-  <button class="purple-button">Заполнить форму</button>
+  <button class="purple-button" @click="$emit('btnClick')">
+    Заполнить форму
+  </button>
 </template>
 
 <script>

@@ -28,16 +28,60 @@
         после проверки. Пожалуйста, заполняйте все пункты корректно, если вы
         испытаете какие-то сложности, воспользуйтесь 2-м вариантом.
       </p>
-      <purple-button />
+      <purple-button @btnClick="popupHandler"></purple-button>
     </div>
+    <overlay v-if="popupShown" @overlayClick="popupHandler"></overlay>
+    <popup v-if="popupShown" @closePopup="popupHandler" class="popup">
+      <quiz
+        :title="data[currentQuestion].title"
+        :question="data[currentQuestion].question"
+        :onNext="nextQuestion"
+        :onPrev="prevQuestion"
+      />
+    </popup>
   </section>
 </template>
 
 <script>
 import PurpleButton from '@/components/ui/PurpleButton';
+import PopUp from '@/components/PopUp';
+import Overlay from '@/components/ui/Overlay';
+import Quiz from '@/components/Quiz';
 export default {
   components: {
     'purple-button': PurpleButton,
+    popup: PopUp,
+    overlay: Overlay,
+    quiz: Quiz,
+  },
+
+  data() {
+    return {
+      popupShown: false,
+      currentQuestion: 1,
+      data: {
+        1: {
+          title: 'Шаг 1 из 12',
+          question: '1',
+        },
+        2: {
+          title: 'Шаг 2 из 12',
+          question: '2',
+        },
+      },
+    };
+  },
+  methods: {
+    popupHandler() {
+      this.popupShown = !this.popupShown;
+    },
+    nextQuestion() {
+      console.log('event');
+      this.currentQuestion = this.currentQuestion + 1;
+    },
+    prevQuestion() {
+      this.currentQuestion = this.currentQuestion - 1;
+    },
   },
 };
 </script>
@@ -151,5 +195,8 @@ export default {
   font-size: 18px;
   line-height: 22px;
   color: #666;
+}
+.popup {
+  min-height: 600px;
 }
 </style>
