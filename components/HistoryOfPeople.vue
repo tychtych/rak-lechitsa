@@ -16,10 +16,13 @@
         </div>
       </div>
       <div class="histories-of-people__video-container">
+        <div class="histories-of-people__video-play">
         <img class="histories-of-people__video" src="@/static/Snimok.png" />
+        <button class="histories-of-people__play-button"></button>
+        </div>
         <p class="histories-of-people__quoute">
           Все видео вы можете найте на нашем
-          <a href="" class="histories-of-people__link">YouTube канале</a>.
+          <a class="histories-of-people__link" href="https://www.youtube.com/results?search_query=%23%D1%8D%D1%82%D0%BE%D0%BD%D0%B5%D0%BB%D0%B5%D1%87%D0%B8%D1%82%D1%81%D1%8F" target="_blank">YouTube канале</a>.
         </p>
       </div>
     </div>
@@ -92,6 +95,9 @@ export default {};
   background-image: url('../static/Polygon8.png');
   background-position: center;
 }
+.histories-of-people__video-container {
+  position: relative;
+}
 .histories-of-people__it-is-not-treated_span {
   font-style: normal;
   font-weight: bold;
@@ -124,6 +130,28 @@ export default {};
 .histories-of-people__video {
   width: 867px;
   height: 450px;
+  grid-row-start: 1;
+  grid-column-start: 1;
+}
+.histories-of-people__video-play {
+  display: grid;
+}
+.histories-of-people__play-button {
+  width: 90px;
+  height: 90px;
+  padding: 0;
+  border: none;
+  background-image: url('../static/Subtract.png');
+  cursor: pointer;
+  grid-row-start: 1;
+  grid-column-start: 1;
+  z-index: 1;
+  justify-self: center;
+  align-self: center;
+}
+.histories-of-people__play-button:hover {
+  background-image: url('../static/SubtractPurple.png');
+  transition: .2s;
 }
 .histories-of-people__quoute {
   margin-top: 10px;

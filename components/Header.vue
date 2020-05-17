@@ -8,9 +8,9 @@
         <div class="header__nav"></div>
         <div class="header__nav"></div>
         <div class="header__nav"></div>
-        <a class="header__link header__link_underline" href>Главная</a>
-        <a class="header__link" href>Истории</a>
-        <a class="header__link" href>Рассказать историю</a>
+        <a class="header__link header__link_underline" name="main" href="#main">Главная</a>
+        <a class="header__link" href="#stories">Истории</a>
+        <a class="header__link" href="#tellstory">Рассказать историю</a>
       </nav>
     </div>
   </header>

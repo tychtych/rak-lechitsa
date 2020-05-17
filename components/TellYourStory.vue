@@ -1,34 +1,47 @@
 <template>
-  <section class="your-story">
+  <section class="your-story" id="tellstory">
     <div class="your-story__container">
       <h2 class="your-story__title">Расскажите свою историю</h2>
-      <p class="your-story__description">
+      <p class="your-story__text">
         Мы публикуем новые истории на сайте раз в неделю. Есть 2 варианта
         поделиться своей историей неизлечимых привычек, навязчивых идей и
         болезненных привязанностей.
       </p>
       <ul class="your-story__option">
-        <li>
-          <a
-            href="#"
+          <li
             class="your-story__option-link your-story__option-link_first"
-            >1-й вариант</a
+            @click="showFirst"
+            v-bind:class="{ option__active: firstShown }"
           >
-        </li>
-        <li>
-          <a
-            href="#"
+            1-й вариант
+          </li>
+          <li
             class="your-story__option-link your-story__option-link_second"
-            >2-й вариант</a
+            @click="showSecond"
+            v-bind:class="{ option__active: secondShown }"
           >
-        </li>
+            2-й вариант
+          </li>
       </ul>
-      <p class="your-story__prompt">
+      <div class="your-story__description">
+
+      <p class="your-story__write-in" v-if="firstShown">
         Заполнить подробную форму прямо на сайте и мы опубликуем вашу историю
         после проверки. Пожалуйста, заполняйте все пункты корректно, если вы
         испытаете какие-то сложности, воспользуйтесь 2-м вариантом.
       </p>
-      <purple-button @btnClick="popupHandler"></purple-button>
+      <p class="your-story__leave-contact" v-if="secondShown">
+        Оставить контакт (почту или номер телефона) и мы свяжемся с вами, зададим вопросы, уточним детали вашей истории.
+      </p>
+      </div>
+      <purple-button @btnClick="popupHandler"
+      v-if="firstShown"
+      :text="'Заполнить форму'">
+      </purple-button>
+      <purple-button
+      v-if="secondShown"
+      :text="'Оставить контакт'">
+      </purple-button>
     </div>
     <overlay v-if="popupShown" @overlayClick="popupHandler"></overlay>
     <popup v-if="popupShown" @closePopup="popupHandler" class="popup">
@@ -58,6 +71,8 @@ export default {
   data() {
     return {
       popupShown: false,
+      firstShown: true,
+      secondShown: false,
       currentQuestion: 1,
       data: {
         1: {
@@ -81,6 +96,14 @@ export default {
     },
     prevQuestion() {
       this.currentQuestion = this.currentQuestion - 1;
+    },
+    showFirst() {
+      this.firstShown = true;
+      this.secondShown = false;
+    },
+    showSecond() {
+      this.firstShown = false;
+      this.secondShown = true;
     },
   },
 };
@@ -117,20 +140,34 @@ export default {
   grid-column-start: 1;
 }
 
-.your-story__description {
+.your-story__text {
   max-width: 340px;
+  grid-row-start: 2;
+  grid-column-start: 1;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+  color: #666;
+}
+
+.your-story__description {
   font-weight: normal;
   font-size: 18px;
   line-height: 22px;
   color: #666;
   grid-row-start: 2;
-  grid-column-start: 1;
+  grid-column-start: 2;
 }
 
 .your-story__write-in {
   max-width: 640px;
   grid-row-start: 2;
   grid-column-start: 3;
+}
+
+.your-story__leave-contact {
+  max-width: 640px;
 }
 
 .your-story__prompt {
@@ -174,20 +211,25 @@ export default {
   text-align: right;
 }
 
-.your-story__option-link_first {
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 22px;
-  color: #000;
-  text-decoration: none;
-}
-
-.your-story__option-link_second {
+.your-story__option-link {
   font-weight: 500;
   font-size: 18px;
   line-height: 22px;
   color: #a2a2a2;
   text-decoration: none;
+  cursor: pointer;
+}
+
+.your-story__option-link_first {
+  padding-bottom: 10px;
+}
+
+.your-story__option-link:hover {
+  color: #000;
+}
+
+.option__active {
+  color: #000;
 }
 
 .your-story__prompt {

@@ -1,11 +1,15 @@
 <template>
   <button class="purple-button" @click="$emit('btnClick')">
-    Заполнить форму
+    {{text}}
   </button>
 </template>
 
 <script>
-export default {};
+export default {
+  props: {
+    text: String,
+  }
+};
 </script>
 
 <style scoped>

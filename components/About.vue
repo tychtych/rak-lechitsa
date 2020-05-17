@@ -146,13 +146,14 @@ export default {
 }
 .about__active {
   color: #ffffff;
-  text-decoration: underline;
 }
 .about__cancer:hover {
   color: #ffffff;
+  cursor: pointer;
 }
 .about__story:hover {
   color: #ffffff;
+  cursor: pointer;
 }
 @media screen and (max-width: 1281px) {
   .about {

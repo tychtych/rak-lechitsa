@@ -28,6 +28,7 @@ export default {
   color: #000;
   text-decoration: none;
   width: 300px;
+  cursor: pointer;
 }
 
 .story-card__name {
