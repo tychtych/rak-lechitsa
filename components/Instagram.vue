@@ -93,7 +93,7 @@ export default {};
 .purple-strip__title {
   max-width: 750px;
   display: inline-block;
-  font-weight: normal;
+  font-weight: 400;
   font-size: 30px;
   line-height: 46px;
   text-transform: uppercase;
@@ -101,7 +101,8 @@ export default {};
 }
 
 .hashtag {
-  font-weight: 900;
+  font-weight: 800;
+  font-size: 44px;
 }
 
 .instagram__container {
@@ -120,12 +121,12 @@ export default {};
   font-size: 32px;
   line-height: 36px;
   border-bottom: 2px solid #000;
-  max-width: 177px;
+  width: fit-content;
 }
 
 .instagram__description {
   padding-top: 32px;
-  font-weight: normal;
+  font-weight: 400;
   font-size: 18px;
   line-height: 22px;
   color: #666;

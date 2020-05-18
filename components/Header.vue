@@ -37,7 +37,6 @@ export default {};
   margin-top: 18px;
   margin-bottom: 18px;
   width: 340px;
-  font-family: Inter;
   font-style: normal;
   font-weight: 600;
   font-size: 16px;
@@ -54,9 +53,8 @@ export default {};
   margin-bottom: 0;
 }
 .header__link {
-  font-family: Inter;
   font-style: normal;
-  font-weight: normal;
+  font-weight: 400;
   font-size: 18px;
   line-height: 24px;
   text-decoration: none;

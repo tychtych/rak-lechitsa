@@ -61,12 +61,12 @@
             </a>
           </li>
           <li>
-            <a href class="popup__link">
+            <a href="https://www.instagram.com/raklechitsa/" target="_blank" class="popup__link">
               <img src="../static/instagram.svg" alt class="popup__link-icon" />
             </a>
           </li>
           <li>
-            <a href class="popup__link">
+            <a href="https://www.youtube.com/results?search_query=%23%D1%8D%D1%82%D0%BE%D0%BD%D0%B5%D0%BB%D0%B5%D1%87%D0%B8%D1%82%D1%81%D1%8F" target="_blank" class="popup__link">
               <img src="../static/youTube.svg" alt class="popup__link-icon" />
             </a>
           </li>
@@ -125,6 +125,11 @@ export default {
   line-height: 36px;
 }
 .footer__container-link {
+  max-width: 300px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
   display: flex;
   grid-column-start: 4;
   justify-content: space-between;
@@ -138,7 +143,7 @@ export default {
   justify-content: space-between;
   flex-basis: 188px;
   font-style: normal;
-  font-weight: normal;
+  font-weight: 400;
   font-size: 18px;
   line-height: 24px;
 }
@@ -152,19 +157,11 @@ export default {
 .footer__link:hover {
   opacity: 0.8;
 }
-.footer__container-link {
-  max-width: 300px;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 18px;
-  line-height: 24px;
-}
 .container__link {
   text-decoration: none;
   color: currentColor;
   cursor: default;
 }
-
 .container__link-underline {
   border-bottom: 1px solid black;
   cursor: pointer;
@@ -183,7 +180,7 @@ export default {
   justify-content: space-between;
   color: #898989;
   font-style: normal;
-  font-weight: normal;
+  font-weight: 400;
   font-size: 18px;
   line-height: 18px;
 }

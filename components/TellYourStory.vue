@@ -24,7 +24,6 @@
           </li>
       </ul>
       <div class="your-story__description">
-
       <p class="your-story__write-in" v-if="firstShown">
         Заполнить подробную форму прямо на сайте и мы опубликуем вашу историю
         после проверки. Пожалуйста, заполняйте все пункты корректно, если вы
@@ -145,14 +144,14 @@ export default {
   grid-row-start: 2;
   grid-column-start: 1;
   font-style: normal;
-  font-weight: normal;
+  font-weight: 400;
   font-size: 18px;
   line-height: 22px;
   color: #666;
 }
 
 .your-story__description {
-  font-weight: normal;
+  font-weight: 400;
   font-size: 18px;
   line-height: 22px;
   color: #666;
@@ -212,7 +211,7 @@ export default {
 }
 
 .your-story__option-link {
-  font-weight: 500;
+  font-weight: 400;
   font-size: 18px;
   line-height: 22px;
   color: #a2a2a2;
