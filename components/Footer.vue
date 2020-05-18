@@ -7,18 +7,21 @@
         </h2>
         <ul class="footer__list">
           <li class="footer__list-item">
-            <a href class="footer__link">Главная</a>
+            <a class="footer__link" href="#main">Главная</a>
           </li>
           <li class="footer__list-item">
-            <a href class="footer__link">Истории</a>
+            <a class="footer__link" href="#stories">Истории</a>
           </li>
         </ul>
         <div class="footer__container-link">
-          <a href class="container__link">
-            Мы&nbsp;в&nbsp;<span class="container__link-underline"
-              >Инстаграме</span
-            >&nbsp;и&nbsp;<span class="container__link-underline">Youtube</span>
+          <div class="footer__links">
+          <a class="container__link" href="https://www.instagram.com/raklechitsa/" target="_blank">
+            Мы в <span class="container__link-underline">Инстаграме</span>
           </a>
+          <a class="container__link" href="https://www.youtube.com/results?search_query=%23%D1%8D%D1%82%D0%BE%D0%BD%D0%B5%D0%BB%D0%B5%D1%87%D0%B8%D1%82%D1%81%D1%8F" target="_blank">
+            и <span class="container__link-underline">Youtube</span>
+          </a>
+          </div>
           <p
             class="container__link container__link_color_another-black"
             @click="popupHandler"
@@ -146,6 +149,9 @@ export default {
   text-decoration: none;
   color: currentColor;
 }
+.footer__link:hover {
+  opacity: 0.8;
+}
 .footer__container-link {
   max-width: 300px;
   font-style: normal;
@@ -156,15 +162,20 @@ export default {
 .container__link {
   text-decoration: none;
   color: currentColor;
-  cursor: pointer;
+  cursor: default;
 }
 
 .container__link-underline {
-  text-decoration: underline;
+  border-bottom: 1px solid black;
+  cursor: pointer;
 }
-
+.container__link-underline:hover {
+  opacity: .8;
+}
 .container__link_color_another-black {
+  width: fit-content;
   color: #121212;
+  cursor: pointer;
 }
 .footer__copyright {
   margin: 0 60px 60px;

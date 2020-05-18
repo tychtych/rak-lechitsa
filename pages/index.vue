@@ -38,4 +38,5 @@ export default {
 input {
   display: block;
 }
+
 </style>

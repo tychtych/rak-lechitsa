@@ -1,5 +1,5 @@
 <template>
-  <section class="stories">
+  <section class="stories" id="stories">
     <h2 class="stories__title">Истории неизлечимых привычек</h2>
     <slot></slot>
     <stories-grid />

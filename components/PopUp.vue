@@ -25,11 +25,13 @@ export default {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  z-index: 10;
 }
 .close-icon {
   position: absolute;
   top: 35px;
   right: 35px;
+  cursor: pointer;
 }
 @media screen and (max-width: 1281px) {
   .popup {
