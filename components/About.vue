@@ -103,9 +103,8 @@ export default {
   margin: 32px 0;
   display: flex;
   justify-content: space-between;
-
   font-style: normal;
-  font-weight: normal;
+  font-weight: 400;
   font-size: 18px;
   line-height: 22px;
 }

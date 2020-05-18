@@ -106,7 +106,7 @@ export default {
 .facts__description {
   max-width: 260px;
   color: #000000;
-  font-weight: normal;
+  font-weight: 400;
   font-size: 12px;
   line-height: 16px;
   margin-bottom: 56px;
@@ -121,7 +121,7 @@ export default {
   max-width: 260px;
 }
 .facts__source {
-  font-weight: normal;
+  font-weight: 400;
   color: #666666;
   font-size: 12px;
   line-height: 16px;
@@ -130,7 +130,7 @@ export default {
   justify-content: flex-end;
 }
 .facts__digit {
-  font-weight: 500;
+  font-weight: 600;
   font-size: 38px;
   line-height: 40px;
   color: #000000;

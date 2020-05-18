@@ -65,7 +65,7 @@ export default {};
 }
 .histories-of-people__text {
   font-style: normal;
-  font-weight: normal;
+  font-weight: 400;
   font-size: 30px;
   line-height: 46px;
 }
@@ -100,7 +100,7 @@ export default {};
 }
 .histories-of-people__it-is-not-treated_span {
   font-style: normal;
-  font-weight: bold;
+  font-weight: 800;
   font-size: 44px;
   line-height: 46px;
 }
@@ -110,7 +110,6 @@ export default {};
 }
 .histories-of-people__heading {
   width: 413px;
-  font-family: Inter;
   font-style: normal;
   font-weight: 600;
   font-size: 32px;
@@ -120,9 +119,8 @@ export default {};
 }
 .histories-of-people__paragraph {
   width: 350px;
-  font-family: Inter;
   font-style: normal;
-  font-weight: normal;
+  font-weight: 400;
   font-size: 18px;
   line-height: 22px;
   color: #666666;
@@ -141,6 +139,7 @@ export default {};
   height: 90px;
   padding: 0;
   border: none;
+  background-color: transparent;
   background-image: url('../static/Subtract.png');
   cursor: pointer;
   grid-row-start: 1;
@@ -155,9 +154,8 @@ export default {};
 }
 .histories-of-people__quoute {
   margin-top: 10px;
-  font-family: Inter;
   font-style: normal;
-  font-weight: normal;
+  font-weight: 400;
   font-size: 12px;
   line-height: 16px;
   color: #666666;

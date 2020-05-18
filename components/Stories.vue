@@ -127,7 +127,7 @@ export default {
 
 .story-card__quote {
   padding-top: 14px;
-  font-weight: normal;
+  font-weight: 400;
   font-size: 14px;
   line-height: 18px;
   color: #666;
@@ -142,7 +142,7 @@ export default {
   color: inherit;
   background-color: #fbfbfb;
   cursor: pointer;
-  font-weight: normal;
+  font-weight: 400;
   font-size: 16px;
   line-height: 20px;
 }
