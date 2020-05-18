@@ -76,7 +76,6 @@ export default {
       this.popupShown = !this.popupShown;
     },
     nextQuestion() {
-      console.log('event');
       this.currentQuestion = this.currentQuestion + 1;
     },
     prevQuestion() {
