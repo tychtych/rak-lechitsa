@@ -15,12 +15,20 @@
         </ul>
         <div class="footer__container-link">
           <div class="footer__links">
-          <a class="container__link" href="https://www.instagram.com/raklechitsa/" target="_blank">
-            Мы в <span class="container__link-underline">Инстаграме</span>
-          </a>
-          <a class="container__link" href="https://www.youtube.com/results?search_query=%23%D1%8D%D1%82%D0%BE%D0%BD%D0%B5%D0%BB%D0%B5%D1%87%D0%B8%D1%82%D1%81%D1%8F" target="_blank">
-            и <span class="container__link-underline">Youtube</span>
-          </a>
+            <a
+              class="container__link"
+              href="https://www.instagram.com/raklechitsa/"
+              target="_blank"
+            >
+              Мы в <span class="container__link-underline">Инстаграме</span>
+            </a>
+            <a
+              class="container__link"
+              href="https://www.youtube.com/results?search_query=%23%D1%8D%D1%82%D0%BE%D0%BD%D0%B5%D0%BB%D0%B5%D1%87%D0%B8%D1%82%D1%81%D1%8F"
+              target="_blank"
+            >
+              и <span class="container__link-underline">Youtube</span>
+            </a>
           </div>
           <p
             class="container__link container__link_color_another-black"
@@ -61,12 +69,20 @@
             </a>
           </li>
           <li>
-            <a href="https://www.instagram.com/raklechitsa/" target="_blank" class="popup__link">
+            <a
+              href="https://www.instagram.com/raklechitsa/"
+              target="_blank"
+              class="popup__link"
+            >
               <img src="../static/instagram.svg" alt class="popup__link-icon" />
             </a>
           </li>
           <li>
-            <a href="https://www.youtube.com/results?search_query=%23%D1%8D%D1%82%D0%BE%D0%BD%D0%B5%D0%BB%D0%B5%D1%87%D0%B8%D1%82%D1%81%D1%8F" target="_blank" class="popup__link">
+            <a
+              href="https://www.youtube.com/results?search_query=%23%D1%8D%D1%82%D0%BE%D0%BD%D0%B5%D0%BB%D0%B5%D1%87%D0%B8%D1%82%D1%81%D1%8F"
+              target="_blank"
+              class="popup__link"
+            >
               <img src="../static/youTube.svg" alt class="popup__link-icon" />
             </a>
           </li>
@@ -167,7 +183,7 @@ export default {
   cursor: pointer;
 }
 .container__link-underline:hover {
-  opacity: .8;
+  opacity: 0.8;
 }
 .container__link_color_another-black {
   width: fit-content;

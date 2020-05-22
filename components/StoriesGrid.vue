@@ -3,10 +3,11 @@
     <ul class="stories__container">
       <li v-for="item in storycards" :key="item.id" @click="goToStory(item.id)">
         <story-card
-          :photo="item.photo"
-          :name="item.name"
-          :quote="item.quote"
+          :photo="item.ImageUrl"
+          :name="item.author"
+          :quote="item.title"
           :id="item.id"
+          :date="item.date"
         />
       </li>
     </ul>
@@ -24,67 +25,13 @@ export default {
       this.$router.push(`/stories/${id}`);
     },
   },
-  data() {
-    return {
-      storycards: [
-        {
-          photo: '/rectangle.jpg',
-          name: 'Ник Вуйчич',
-          quote: 'Я родился в Москве в 70-м на краю города.',
-          link: '',
-          id: '1',
-        },
-        {
-          photo: '/rectangle.jpg',
-          name: 'Ник Вуйчич',
-          quote: 'Я родился в Москве в 70-м на краю города.',
-          link: '',
-          id: '2',
-        },
-        {
-          photo: '/rectangle.jpg',
-          name: 'Ник Вуйчич',
-          quote: 'Я родился в Москве в 70-м на краю города.',
-          link: '',
-          id: '3',
-        },
-        {
-          photo: '/rectangle.jpg',
-          name: 'Ник Вуйчич',
-          quote: 'Я родился в Москве в 70-м на краю города.',
-          link: '',
-          id: '4',
-        },
-        {
-          photo: '/rectangle.jpg',
-          name: 'Ник Вуйчич',
-          quote: 'Я родился в Москве в 70-м на краю города.',
-          link: '',
-          id: '5',
-        },
-        {
-          photo: '/rectangle.jpg',
-          name: 'Ник Вуйчич',
-          quote: 'Я родился в Москве в 70-м на краю города.',
-          link: '',
-          id: '6',
-        },
-        {
-          photo: '/rectangle.jpg',
-          name: 'Ник Вуйчич',
-          quote: 'Я родился в Москве в 70-м на краю города.',
-          link: '',
-          id: '7',
-        },
-        {
-          photo: '/rectangle.jpg',
-          name: 'Ник Вуйчич',
-          quote: 'Я родился в Москве в 70-м на краю города.',
-          link: '',
-          id: '8',
-        },
-      ],
-    };
+  computed: {
+    storycards() {
+      return this.$store.getters['stories/getStories'];
+    },
+  },
+  beforeMount() {
+    this.$store.dispatch('stories/fetchStories');
   },
 };
 </script>

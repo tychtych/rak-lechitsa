@@ -17,12 +17,17 @@
       </div>
       <div class="histories-of-people__video-container">
         <div class="histories-of-people__video-play">
-        <img class="histories-of-people__video" src="@/static/Snimok.png" />
-        <button class="histories-of-people__play-button"></button>
+          <img class="histories-of-people__video" src="@/static/Snimok.png" />
+          <button class="histories-of-people__play-button"></button>
         </div>
         <p class="histories-of-people__quoute">
           Все видео вы можете найте на нашем
-          <a class="histories-of-people__link" href="https://www.youtube.com/results?search_query=%23%D1%8D%D1%82%D0%BE%D0%BD%D0%B5%D0%BB%D0%B5%D1%87%D0%B8%D1%82%D1%81%D1%8F" target="_blank">YouTube канале</a>.
+          <a
+            class="histories-of-people__link"
+            href="https://www.youtube.com/results?search_query=%23%D1%8D%D1%82%D0%BE%D0%BD%D0%B5%D0%BB%D0%B5%D1%87%D0%B8%D1%82%D1%81%D1%8F"
+            target="_blank"
+            >YouTube канале</a
+          >.
         </p>
       </div>
     </div>
@@ -150,7 +155,7 @@ export default {};
 }
 .histories-of-people__play-button:hover {
   background-image: url('../static/SubtractPurple.png');
-  transition: .2s;
+  transition: 0.2s;
 }
 .histories-of-people__quoute {
   margin-top: 10px;
