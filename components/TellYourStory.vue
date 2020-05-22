@@ -8,38 +8,39 @@
         болезненных привязанностей.
       </p>
       <ul class="your-story__option">
-          <li
-            class="your-story__option-link your-story__option-link_first"
-            @click="showFirst"
-            v-bind:class="{ option__active: firstShown }"
-          >
-            1-й вариант
-          </li>
-          <li
-            class="your-story__option-link your-story__option-link_second"
-            @click="showSecond"
-            v-bind:class="{ option__active: secondShown }"
-          >
-            2-й вариант
-          </li>
+        <li
+          class="your-story__option-link your-story__option-link_first"
+          @click="showFirst"
+          v-bind:class="{ option__active: firstShown }"
+        >
+          1-й вариант
+        </li>
+        <li
+          class="your-story__option-link your-story__option-link_second"
+          @click="showSecond"
+          v-bind:class="{ option__active: secondShown }"
+        >
+          2-й вариант
+        </li>
       </ul>
       <div class="your-story__description">
-      <p class="your-story__write-in" v-if="firstShown">
-        Заполнить подробную форму прямо на сайте и мы опубликуем вашу историю
-        после проверки. Пожалуйста, заполняйте все пункты корректно, если вы
-        испытаете какие-то сложности, воспользуйтесь 2-м вариантом.
-      </p>
-      <p class="your-story__leave-contact" v-if="secondShown">
-        Оставить контакт (почту или номер телефона) и мы свяжемся с вами, зададим вопросы, уточним детали вашей истории.
-      </p>
+        <p class="your-story__write-in" v-if="firstShown">
+          Заполнить подробную форму прямо на сайте и мы опубликуем вашу историю
+          после проверки. Пожалуйста, заполняйте все пункты корректно, если вы
+          испытаете какие-то сложности, воспользуйтесь 2-м вариантом.
+        </p>
+        <p class="your-story__leave-contact" v-if="secondShown">
+          Оставить контакт (почту или номер телефона) и мы свяжемся с вами,
+          зададим вопросы, уточним детали вашей истории.
+        </p>
       </div>
-      <purple-button @btnClick="popupHandler"
-      v-if="firstShown"
-      :text="'Заполнить форму'">
-      </purple-button>
       <purple-button
-      v-if="secondShown"
-      :text="'Оставить контакт'">
+        @btnClick="popupHandler"
+        v-if="firstShown"
+        :text="'Заполнить форму'"
+      >
+      </purple-button>
+      <purple-button v-if="secondShown" :text="'Оставить контакт'">
       </purple-button>
     </div>
     <overlay v-if="popupShown" @overlayClick="popupHandler"></overlay>

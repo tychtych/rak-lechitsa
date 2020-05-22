@@ -1,6 +1,6 @@
 <template>
   <button class="purple-button" @click="$emit('btnClick')">
-    {{text}}
+    {{ text }}
   </button>
 </template>
 
@@ -8,7 +8,7 @@
 export default {
   props: {
     text: String,
-  }
+  },
 };
 </script>
 

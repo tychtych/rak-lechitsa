@@ -20,68 +20,6 @@ export default {
       this.$router.push('/stories');
     },
   },
-  data() {
-    return {
-      storycards: [
-        {
-          photo: '/rectangle.jpg',
-          name: 'Ник Вуйчич',
-          quote: 'Я родился в Москве в 70-м на краю города.',
-          link: '',
-          id: '1',
-        },
-        {
-          photo: '/rectangle.jpg',
-          name: 'Ник Вуйчич',
-          quote: 'Я родился в Москве в 70-м на краю города.',
-          link: '',
-          id: '2',
-        },
-        {
-          photo: '/rectangle.jpg',
-          name: 'Ник Вуйчич',
-          quote: 'Я родился в Москве в 70-м на краю города.',
-          link: '',
-          id: '3',
-        },
-        {
-          photo: '/rectangle.jpg',
-          name: 'Ник Вуйчич',
-          quote: 'Я родился в Москве в 70-м на краю города.',
-          link: '',
-          id: '4',
-        },
-        {
-          photo: '/rectangle.jpg',
-          name: 'Ник Вуйчич',
-          quote: 'Я родился в Москве в 70-м на краю города.',
-          link: '',
-          id: '5',
-        },
-        {
-          photo: '/rectangle.jpg',
-          name: 'Ник Вуйчич',
-          quote: 'Я родился в Москве в 70-м на краю города.',
-          link: '',
-          id: '6',
-        },
-        {
-          photo: '/rectangle.jpg',
-          name: 'Ник Вуйчич',
-          quote: 'Я родился в Москве в 70-м на краю города.',
-          link: '',
-          id: '7',
-        },
-        {
-          photo: '/rectangle.jpg',
-          name: 'Ник Вуйчич',
-          quote: 'Я родился в Москве в 70-м на краю города.',
-          link: '',
-          id: '8',
-        },
-      ],
-    };
-  },
 };
 </script>
 
