@@ -1,7 +1,7 @@
 <template>
   <div>
     <ul class="stories__container">
-      <li v-for="item in storycards" :key="item.id" @click="goToStory(item.id)">
+      <li v-for="item in storyCards" :key="item.id" @click="goToStory(item.id)">
         <story-card
           :photo="item.ImageUrl"
           :name="item.author"
@@ -26,7 +26,7 @@ export default {
     },
   },
   computed: {
-    storycards() {
+    storyCards() {
       return this.$store.getters['stories/getStories'];
     },
   },
