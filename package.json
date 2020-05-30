@@ -16,6 +16,7 @@
     "@nuxtjs/pwa": "^3.0.0-0"
   },
   "devDependencies": {
+    "@nuxtjs/dotenv": "^1.4.1",
     "eslint-config-prettier": "^6.10.0",
     "eslint-plugin-prettier": "^3.1.2",
     "husky": "^4.2.5",

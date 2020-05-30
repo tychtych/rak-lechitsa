@@ -3,7 +3,7 @@
     <ul class="stories__container">
       <li v-for="item in storycards" :key="item.id" @click="goToStory(item.id)">
         <story-card
-          :photo="item.ImageUrl"
+          :imageUrl="defineImage(item)"
           :name="item.author"
           :quote="item.title"
           :id="item.id"
@@ -20,9 +20,24 @@ export default {
   components: {
     'story-card': Storycard,
   },
+  data() {
+    return {
+      baseUrl: process.env.baseUrl,
+    };
+  },
   methods: {
     goToStory(id) {
       this.$router.push(`/stories/${id}`);
+    },
+    defineImage(item) {
+      if (!item.ImageUrl || item.ImageUrl.length === 0) {
+        return '@/assets/no_image.png';
+      }
+      const formats = item.ImageUrl[0].formats;
+      if (!formats.small || !formats.small.url) {
+        return '@/assets/no_image.png';
+      }
+      return new URL(formats.small.url, this.baseUrl).toString();
     },
   },
   computed: {
