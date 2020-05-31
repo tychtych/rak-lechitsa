@@ -1,7 +1,11 @@
 <template>
   <div>
     <ul class="stories__container">
-      <li v-for="item in storycards" :key="item.id" @click="goToStory(item.id)">
+      <li
+        v-for="item in paginatedData"
+        :key="item.id"
+        @click="goToStory(item.id)"
+      >
         <story-card
           :imageUrl="defineImage(item)"
           :name="item.author"
@@ -16,13 +20,21 @@
 
 <script>
 import Storycard from '@/components/Storycard';
+
 export default {
   components: {
     'story-card': Storycard,
   },
+  props: {
+    itemsOnPage: {
+      type: Number,
+      required: true,
+    },
+  },
   data() {
     return {
       baseUrl: process.env.baseUrl,
+      pageNumber: 0,
     };
   },
   methods: {
@@ -43,6 +55,12 @@ export default {
   computed: {
     storycards() {
       return this.$store.getters['stories/getStories'];
+    },
+    paginatedData() {
+      const start = this.pageNumber * this.itemsOnPage;
+      const end = start + this.itemsOnPage;
+
+      return this.storycards.slice(start, end);
     },
   },
   beforeMount() {

@@ -1,12 +1,10 @@
 <template>
   <div class="container">
     <h2 class="stories__title">Истории неизлечимых привычек</h2>
-    <slot>
-      <input-search>
-        <button-search>Поиск</button-search>
-      </input-search>
-    </slot>
-    <stories-grid />
+    <input-search>
+      <button-search>Поиск</button-search>
+    </input-search>
+    <stories-grid :items-on-page="8" />
   </div>
 </template>
 
@@ -14,6 +12,7 @@
 import StoriesGrid from '@/components/StoriesGrid';
 import Button from '@/components/ui/Button';
 import Input from '@/components/ui/Input';
+
 export default {
   components: {
     'stories-grid': StoriesGrid,
@@ -30,6 +29,7 @@ export default {
   padding-bottom: 100px;
   padding-top: 100px;
 }
+
 .stories__title {
   font-weight: 600;
   font-size: 32px;
