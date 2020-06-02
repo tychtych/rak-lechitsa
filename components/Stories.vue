@@ -2,7 +2,7 @@
   <section class="stories" id="stories">
     <h2 class="stories__title">Истории неизлечимых привычек</h2>
     <slot></slot>
-    <stories-grid :items-on-page="8" />
+    <stories-grid items-on-page="8" />
     <button class="stories__more" @click="goToStories">Больше статей</button>
   </section>
 </template>
