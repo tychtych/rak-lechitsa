@@ -14,14 +14,13 @@ export const state = () => ({
   },
 };**/
 
-export const mutations = {
-  allStoriesFetched(state, fetchedStories) {
-    state.stories = fetchedStories;
-    return state;
+//прячем внутренною структура в метод
+export const getters = {
+  getStories(state) {
+    return state.stories;
   },
-  currentStoryFetched(state, fetchedCurrentStory) {
-    state.currentStory = fetchedCurrentStory;
-    return state;
+  getStoryById(state) {
+    return state.currentStory;
   },
 };
 
@@ -40,12 +39,14 @@ export const actions = {
       });
   },
 };
-//прячем внутренною структура в метод
-export const getters = {
-  getStories(state) {
-    return state.stories;
+
+export const mutations = {
+  allStoriesFetched(state, fetchedStories) {
+    state.stories = fetchedStories;
+    return state;
   },
-  getStoryById(state) {
-    return state.currentStory;
+  currentStoryFetched(state, fetchedCurrentStory) {
+    state.currentStory = fetchedCurrentStory;
+    return state;
   },
 };
