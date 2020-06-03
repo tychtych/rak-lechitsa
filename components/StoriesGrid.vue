@@ -6,6 +6,8 @@
         :key="item.id"
         @click="goToStory(item.id)"
       >
+
+     
         <story-card
           :imageUrl="defineImage(item)"
           :name="item.author"
@@ -53,7 +55,7 @@ export default {
     },
   },
   computed: {
-    storycards() {
+    storyCards() {
       return this.$store.getters['stories/getStories'];
     },
     paginatedData() {

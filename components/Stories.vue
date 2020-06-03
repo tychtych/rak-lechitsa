@@ -8,11 +8,9 @@
 </template>
 
 <script>
-import Storycard from '@/components/Storycard';
 import StoriesGrid from '@/components/StoriesGrid';
 export default {
   components: {
-    'story-card': Storycard,
     'stories-grid': StoriesGrid,
   },
   methods: {
