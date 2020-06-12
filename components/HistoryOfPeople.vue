@@ -17,14 +17,23 @@
       </div>
       <div class="histories-of-people__video-container">
         <div class="histories-of-people__video-play">
-          <img class="histories-of-people__video" src="@/static/Snimok.png" />
-          <button class="histories-of-people__play-button"></button>
+          <!--  <img class="histories-of-people__video" src="@/static/Snimok.png" /> -->
+          <iframe
+            width="560"
+            height="315"
+            class="histories-of-people__video"
+            src="https://www.youtube.com/embed/coOppM34GtI"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+          <!-- <button class="histories-of-people__play-button"></button> -->
         </div>
         <p class="histories-of-people__quoute">
           Все видео вы можете найте на нашем
           <a
             class="histories-of-people__link"
-            href="https://www.youtube.com/results?search_query=%23%D1%8D%D1%82%D0%BE%D0%BD%D0%B5%D0%BB%D0%B5%D1%87%D0%B8%D1%82%D1%81%D1%8F"
+            href="https://youtu.be/coOppM34GtI"
             target="_blank"
             >YouTube канале</a
           >.
