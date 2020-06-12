@@ -1,6 +1,13 @@
 # rak-lechitsa
 
-> project for rak-lechitsa
+This is the clone of website 'Cancer is treatable' ("Рак Лечится").
+
+Technology stack:
+* VueJS
+* NuxtJS
+* Strapi
+
+Site is deployed via Netlify
 
 ## Build Setup
 
