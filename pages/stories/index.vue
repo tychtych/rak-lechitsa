@@ -64,7 +64,9 @@ export default {
   },
   computed: {
     storycards() {
-      return this.$store.getters['stories/getStories'];
+      let getter = this.$store.getters['stories/getStories'];
+      console.log(getter);
+      return getter;
     },
     paginatedData() {
       const start = this.pageNumber * this.itemsOnPage;
